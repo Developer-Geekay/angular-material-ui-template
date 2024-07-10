@@ -1,0 +1,42 @@
+@use "@angular/material" as mat;
+// @use "themecolors/typographyConfig" as typography;
+
+// @include mat.core(typography.$my-app-typography);
+@include mat.core();
+
+@import "variables";
+// @import "layouts/transitions";
+@import "helpers/color";
+@import "helpers/glass";
+@import "helpers/icon-size";
+
+// //Theme colors
+
+@import "themecolors/default_theme";
+@import "themecolors/blue-theme";
+@import "themecolors/red-theme";
+@import "themecolors/green-theme";
+@import "themecolors/yellow-theme";
+@import "themecolors/spring-green-theme";
+@import "themecolors/cyan-theme";
+@import "themecolors/rose-theme";
+@import "themecolors/violet-theme";
+@import "themecolors/chartreuse-theme";
+@import "themecolors/magenta-theme";
+@import "themecolors/orange-theme";
+@import "themecolors/custom-theme";
+
+// //container layout
+@import "overrides/materialoverrides";
+@import "container";
+@import "layouts";
+@import "grid/grid";
+@import "helpers/custom-flex";
+@import "helpers/index";
+
+
+// // pages
+// @import "pages/dashboards";
+@import "pages/auth";
+@import "pages/setting";
+

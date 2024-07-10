@@ -1,0 +1,34 @@
+// Define a dark theme
+$dark-theme: mat.define-theme(
+  (
+    color: (
+      theme-type: dark,
+      primary: mat.$yellow-palette,
+    ),
+  )
+);
+
+// Define a light theme
+$light-theme: mat.define-theme(
+  (
+    color: (
+      theme-type: light,
+      primary: mat.$yellow-palette,
+    ),
+  )
+);
+
+.yellow-theme-primary {
+  background-color: mat.get-theme-color($light-theme, primary, 50);
+}
+
+
+.yellow-theme {
+  @include mat.all-component-colors($light-theme);
+  @include mat.color-variants-backwards-compatibility($light-theme);
+}
+
+.yellow-theme.dark {
+  @include mat.all-component-colors($dark-theme);
+  @include mat.color-variants-backwards-compatibility($dark-theme);
+}

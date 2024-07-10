@@ -1,0 +1,14 @@
+.app-layout{
+
+  & .layout-header{
+    contain: layout;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    height: var(--mat-toolbar-standard-height);
+  }
+  & .layout-content{
+    margin-top: calc(var(--mat-toolbar-standard-height) + 10px);
+  }
+}

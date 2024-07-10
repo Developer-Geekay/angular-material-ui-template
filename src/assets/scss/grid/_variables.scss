@@ -1,0 +1,76 @@
+$grid-columns: 12 !default;
+$grid-gutter: 30px !default;
+
+$breakpoints: (
+  xsmall: 0,
+  small:  600px,
+  medium: 960px,
+  large:  1280px,
+  xlarge: 2100px
+) !default;
+
+$breakpoint-infixs: (
+  xsmall: '',
+  small: 'sm',
+  medium: 'md',
+  large: 'lg',
+  xlarge: 'xl'
+) !default;
+
+
+
+
+// $grid-columns:                12 !default;
+// $grid-gutter-width:           1.5rem !default;
+// $grid-row-columns:            6 !default;
+
+// $breakpoints: (
+//   xs: 0,
+//   sm: 576px,
+//   md: 768px,
+//   lg: 992px,
+//   xl: 1200px,
+//   xxl: 1400px,
+// );
+// $container-max-widths: (
+//   sm: 540px,
+//   md: 720px,
+//   lg: 960px,
+//   xl: 1140px,
+//   xxl: 1320px,
+// );
+// $gutters: (
+//   "xs": 0.9375rem,
+//   // 15px in rem
+//   "sm": 1.25rem,
+//   // 20px in rem
+//   "md": 1.875rem,
+//   // 30px in rem
+//   "lg": 2.5rem,
+//   // 40px in rem
+//   "xl": 3.125rem,
+//   // 50px in rem
+//   "xxl": 3.75rem // 60px in rem,
+// );
+
+
+// .container,
+//   // 100% wide container at all breakpoints
+//   .container-fluid {
+//   @include make-container();
+// }
+// $container-padding-x: $grid-gutter-width !default;
+
+// @mixin make-container($gutter: $container-padding-x) {
+//   --gutter-x: #{$gutter};
+//   --gutter-y: 0;
+//   width: 100%;
+//   padding-right: calc(
+//     var(--gutter-x) * 0.5
+//   ); // stylelint-disable-line function-disallowed-list
+//   padding-left: calc(
+//     var(--gutter-x) * 0.5
+//   ); // stylelint-disable-line function-disallowed-list
+//   margin-right: auto;
+//   margin-left: auto;
+// }

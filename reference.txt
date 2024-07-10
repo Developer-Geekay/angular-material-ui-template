@@ -1,0 +1,25 @@
+-For generating PWA icons: https://cthedot.de/icongen/
+-For generating IOS Splash Screens: https://appsco.pe/developer/splash-sc...
+-Free SVG icons: https://www.iconfinder.com/
+-Online SVG Editor: https://vectr.com/
+
+
+
+Custom theme builder preview
+https://material-theme-builder.zoaibkhan.com/inputs
+
+Cors / Proxy config
+angular.json -> architect -> serve
+
+"options": {
+  "proxyConfig": "./src/proxy.conf.json"
+},
+
+proxy.conf.json
+{
+  "/api": {
+    "target": "http://localhost:8080",
+    "secure": false,
+    "changeOrigin": true
+  }
+}

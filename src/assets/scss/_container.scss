@@ -1,0 +1,117 @@
+*,
+:after,
+:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  @include sass-to-css-vars($glass, "glass");
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: $font-family;
+  color: $textPrimary;
+  font-size: 14px;
+  line-height: 1.334rem;
+  margin: 0;
+}
+
+// html .mat-drawer-container {
+//   background-color: $white;
+// }
+
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+.shadow-none {
+  box-shadow: none !important;
+}
+
+.rounded {
+  border-radius: $border-radius !important;
+}
+
+.rounded-circle {
+  border-radius: 50% !important;
+}
+
+.rounded-pill {
+  border-radius: 25px !important;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.text-decoration-none {
+  text-decoration: none;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.table-responsive {
+  overflow-x: auto;
+
+  td,
+  mat-cell {
+    white-space: nowrap;
+    padding: 16px;
+  }
+}
+
+.op-5 {
+  opacity: 0.5;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.syncopate {
+  font-family: "Syncopate", sans-serif;
+}
+
+.glass {
+  border-radius: var(--glass-radius) !important;
+  background-color: rgb(255 255 255 / var(--glass-transparent)) !important;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25) !important;
+  backdrop-filter: blur(var(--glass-blur)) !important;
+}
+
+.dark .glass {
+  --glass-transparent: 50%;
+  background-color: rgb(0 0 0 / var(--glass-transparent)) !important;
+  backdrop-filter: blur(var(--glass-blur)) !important;
+  color: var(--mat-app-text-color);
+}
+
+.active-menu {
+  --mat-list-active-indicator-shape: 15px;
+  background-color: var(--mat-list-active-indicator-color);
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background-color: transparent
+}
+
+.flex-wrap{
+  flex-wrap: wrap;
+}

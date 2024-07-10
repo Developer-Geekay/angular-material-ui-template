@@ -1,0 +1,60 @@
+@use "@angular/material" as mat;
+
+@mixin theme($theme) {
+  .sidenav-scroll-wrapper {
+    background-color: rgba(mat.get-theme-color($theme, primary-container), 0.75);
+  }
+  .sidenav-content {
+    @media (pointer: fine) {
+      &::-webkit-scrollbar-thumb {
+        background-color: mat.get-theme-color($theme, primary);
+      }
+    }
+  }
+  
+  .mat-secondary.mat-mdc-button-base{
+    @include mat.button-color($theme, $color-variant: secondary);
+  }
+}
+
+@mixin variant-success($theme) {
+  .mat-success.mat-mdc-button-base{
+    @include mat.button-color($theme, $color-variant: primary);
+  }
+  .mat-success.mat-mdc-form-field{
+    @include mat.input-color($theme);
+    @include mat.form-field-color($theme);
+  }
+}
+
+@mixin variant-warning($theme) {
+  .mat-warning.mat-mdc-button-base{
+    @include mat.button-color($theme, $color-variant: primary);
+    // color: mat.get-theme-color($theme, primary, 100);
+    // background-color: mat.get-theme-color($theme, primary, 100);
+  }
+  .mat-warning.mat-mdc-form-field{
+    @include mat.input-color($theme);
+    @include mat.form-field-color($theme);
+  }
+}
+@mixin variant-info($theme) {
+  .mat-info.mat-mdc-button-base{
+    @include mat.button-color($theme, $color-variant: primary);
+    // color: mat.get-theme-color($theme, primary, 100);
+    // background-color: mat.get-theme-color($theme, tertiary, 95);
+  }
+  .mat-info.mat-mdc-form-field{
+    @include mat.input-color($theme);
+    @include mat.form-field-color($theme);
+  }
+}
+@mixin variant-danger($theme) {
+  .mat-danger.mat-mdc-button-base{
+    @include mat.button-color($theme, $color-variant: primary);
+  }
+  .mat-danger.mat-mdc-form-field{
+    @include mat.input-color($theme);
+    @include mat.form-field-color($theme);
+  }
+}

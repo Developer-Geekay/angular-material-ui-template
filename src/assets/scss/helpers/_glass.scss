@@ -1,0 +1,20 @@
+@use 'variables';
+
+@function map-to-css-variables($map, $prefix: "") {
+  $css-vars: ();
+
+  @each $key, $value in $map {
+    $css-var-name: if($prefix == "", "--#{$key}", "--#{$prefix}-#{$key}");
+    $css-vars: map-merge($css-vars, ($css-var-name: #{$value}));
+  }
+
+  @return $css-vars;
+}
+
+@mixin sass-to-css-vars($map, $prefix: "") {
+  $css-vars: map-to-css-variables($map, $prefix);
+
+  @each $css-var-name, $value in $css-vars {
+    #{$css-var-name}: #{$value};
+  }
+}

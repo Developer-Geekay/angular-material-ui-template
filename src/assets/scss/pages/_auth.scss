@@ -1,0 +1,73 @@
+.auth-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-container {
+  --mdc-tab-indicator-active-indicator-height: 0px;
+  --mat-tab-header-divider-height: 0px;
+}
+
+.auth-theme-switch {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+}
+
+.auth-container .mat-mdc-tab {
+  --mdc-secondary-navigation-tab-container-height: 35px;
+}
+
+.auth-container .mdc-tab--active {
+  --mat-tab-header-active-label-text-color: var(--mat-app-background-color);
+  --mat-tab-header-active-focus-label-text-color: var(--mat-app-background-color);
+  border-radius: 7px !important;
+  background-color: var(--mat-app-text-color);
+  color: var(--mat-app-background-color);
+}
+
+.boxed-auth {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.login-bg {
+  background-image: url(/assets/images/background/login-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.dark .login-bg {
+  background-image: url(/assets/images/background/login-bg-dark.jpg);
+}
+
+.auth-logo {
+  background-image: url(/assets/images/logo/logo.svg);
+  background-size: cover;
+}
+
+.brand-logo svg {
+  width: 40px;
+  height: 40px;
+}
+
+.valid {
+  color: green;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  color: red;
+}

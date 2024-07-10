@@ -1,0 +1,13 @@
+<mat-card [class.animate-parallax]="animateCard()" (mousemove)="onMouseMove($event)" (mouseout)="onMouseOut()" class="overflow-hidden" >
+  <mat-card-header>
+    <mat-card-title>title</mat-card-title>
+    <mat-card-subtitle>subtitle</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>Ok</button>
+  </mat-card-actions>
+  <!-- <div *ngIf="animateCard()" class="glow"></div> -->
+</mat-card>

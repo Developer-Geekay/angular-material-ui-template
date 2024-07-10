@@ -1,0 +1,123 @@
+@use "sass:map";
+@use "variables";
+
+$utilities: (
+  "margin": (
+    property: margin,
+    class: m,
+    values:
+      map.merge(
+        variables.$spacers,
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  "margin-x": (
+    property: margin-left margin-right,
+    class: mx,
+    values:
+      map.merge(
+        variables.$spacers,
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  "margin-y": (
+    property: margin-top margin-bottom,
+    class: my,
+    values:
+      map.merge(
+        variables.$spacers,
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  "margin-top": (
+    property: margin-top,
+    class: mt,
+    values:
+      map.merge(
+        variables.$spacers,
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  "margin-bottom": (
+    property: margin-bottom,
+    class: mb,
+    values:
+      map.merge(
+        variables.$spacers,
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  "margin-right": (
+    property: margin-right,
+    class: mr,
+    values:
+      map.merge(
+        variables.$spacers,
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  "margin-left": (
+    property: margin-left,
+    class: ml,
+    values:
+      map.merge(
+        variables.$spacers,
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  "padding-left": (
+    property: padding-left,
+    class: pl,
+    values: variables.$spacers,
+  ),
+  "padding-right": (
+    property: padding-right,
+    class: pr,
+    values: variables.$spacers,
+  ),
+  "padding": (
+    property: padding,
+    class: p,
+    values: variables.$spacers,
+  ),
+  "padding-x": (
+    property: padding-left padding-right,
+    class: px,
+    values: variables.$spacers,
+  ),
+  "padding-y": (
+    property: padding-top padding-bottom,
+    class: py,
+    values: variables.$spacers,
+  ),
+  "padding-top": (
+    property: padding-top,
+    class: pt,
+    values: variables.$spacers,
+  ),
+  "padding-bottom": (
+    property: padding-bottom,
+    class: pb,
+    values: variables.$spacers,
+  ),
+  "gap": (
+    property: gap,
+    class: gap,
+    values: variables.$spacers,
+  ),
+);
+

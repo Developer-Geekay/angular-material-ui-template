@@ -1,0 +1,32 @@
+.avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid var(--mat-sidenav-container-divider-color);
+}
+.avatar.avatar-lg {
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.5rem;
+}
+.avatar.avatar-lg .avatar-icon {
+  font-size: 1.5rem;
+}
+.avatar.avatar-xl {
+  width: 4rem;
+  height: 4rem;
+  font-size: 2rem;
+}
+.avatar.avatar-xl .avatar-icon {
+  font-size: 2rem;
+}
+
+
+.avatar.avatar-circle {
+  border-radius: 50%;
+  overflow: hidden;
+}

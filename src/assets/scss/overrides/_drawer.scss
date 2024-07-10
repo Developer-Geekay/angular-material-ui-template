@@ -1,0 +1,95 @@
+// Material Sidenav Overrides
+.mat-drawer-container:not(.sidebar-handset) {
+  --mat-sidenav-container-shape: 0px;
+  --mat-sidenav-container-divider-color: #dddada;
+  & .mat-drawer {
+    width: 60px;
+    transition: width 0.5s, color 0.5s;
+  }
+  & .mat-drawer-content {
+    margin-left: 60px;
+    transition: margin-left 0.5s, color 0.5s;
+  }
+}
+
+.mat-drawer-container {
+  --mat-sidenav-content-background-color: #ededed;
+}
+
+.dark .mat-drawer-container {
+  --mat-sidenav-container-divider-color: #33353d;
+  --mat-sidenav-content-background-color: #121212;
+}
+
+.mat-drawer-expanded.mat-drawer-container:not(.sidebar-handset) {
+  & .mat-drawer {
+    width: 200px !important;
+  }
+  & .mat-drawer-content {
+    margin-left: 200px !important;
+  }
+}
+
+.sidebar-handset.mat-drawer-container {
+  --mat-sidenav-container-width: 250px;
+}
+
+// Sidebar Custom Style
+
+.sidebar-toggle-button {
+  position: fixed;
+  transition: all 0.5s, color 0.5s;
+  top: 50px;
+  width: 40px;
+  height: 40px;
+}
+
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+  height: var(--mat-toolbar-standard-height);
+  & .sidebar-title {
+    text-wrap: nowrap;
+  }
+}
+
+.sidebar-brand svg {
+  width: 40px;
+  height: 40px;
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 70px);
+  & .sidebar-footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    padding-top: 10px;
+    & .sidebar-footer-item {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-left: 10px !important;
+    }
+  }
+}
+
+.expanded-visible {
+  width: 0px;
+  overflow: hidden;
+}
+.mat-drawer-expanded .expanded-visible,
+.sidebar-handset .expanded-visible {
+  width: auto;
+  transition: width 0.5s, color 0.5s;
+}
+.main-header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}

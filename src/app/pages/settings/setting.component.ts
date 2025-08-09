@@ -29,24 +29,10 @@ export class SettingComponent implements OnInit {
 
   settingsTabs = [
     {
-      label: 'Storage',
-      route: '/settings/application',
-      icon: 'settings',
-      description: 'System configuration, data management, and storage options',
-      disabled: false
-    },
-    {
       label: 'Theme',
       route: '/settings/theme',
       icon: 'palette',
       description: 'Appearance customization',
-      disabled: false
-    },
-    {
-      label: 'Sync',
-      route: '/settings/sync',
-      icon: 'cloud_sync',
-      description: 'Google Sheets synchronization settings',
       disabled: false
     }
   ];

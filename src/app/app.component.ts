@@ -1,15 +1,14 @@
 import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { ThemeService } from './services/app/theme.service';
+import { ThemeService } from './services/theme.service';
 import { CommonModule } from '@angular/common';
-import { LayoutService } from './services/app/layout.service';
-import { MobileDeniedComponent } from './pages/error/mobile-denied/mobile-denied.component';
+import { LayoutService } from './services/layout.service';
 import { MatIconRegistry } from '@angular/material/icon';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,CommonModule,MobileDeniedComponent],
+  imports: [RouterOutlet,CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -24,7 +23,7 @@ export class AppComponent {
   }
 
   ngOnInit(): void {
-    this.themeService.updatePwaThemeColor();
+
   }
 
 }

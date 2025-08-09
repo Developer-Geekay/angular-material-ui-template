@@ -1,0 +1,16 @@
+<div class="app-container">
+  <!-- Header -->
+  <header class="app-header">
+    <ng-content select="[slot=header]"></ng-content>
+  </header>
+
+  <!-- Main Content -->
+  <main class="app-content">
+    <ng-content select="[slot=content]"></ng-content>
+  </main>
+
+  <!-- Bottom Bar -->
+  <footer class="app-footer">
+    <ng-content select="[slot=footer]"></ng-content>
+  </footer>
+</div>

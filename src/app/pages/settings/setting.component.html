@@ -1,0 +1,33 @@
+<app-baselayout>
+  <div slot="header">
+    <div class="header">
+      <div class="header-left">
+      </div>
+      <div class="header-content">
+        <h2 class="title">Settings</h2>
+      </div>
+      <div class="header-right">
+      </div>
+    </div>
+  </div>
+  <div slot="content" class="settings-container">
+    <mat-tab-group [selectedIndex]="selectedTabIndex" (selectedIndexChange)="onTabChange($event)" class="settings-tabs"
+      mat-align-tabs="center" mat-stretch-tabs="false" animationDuration="300ms">
+
+      <mat-tab *ngFor="let tab of settingsTabs; let i = index" [label]="tab.label" [disabled]="tab.disabled">
+
+        <ng-template mat-tab-label>
+          <mat-icon class="tab-icon">{{ tab.icon }}</mat-icon>
+            {{ tab.label }}
+        </ng-template>
+      </mat-tab>
+    </mat-tab-group>
+
+    <div class="settings-content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <div slot="footer">
+    <app-bottombar></app-bottombar>
+  </div>
+</app-baselayout>

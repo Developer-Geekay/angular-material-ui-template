@@ -1,3 +1,4 @@
+@use "sass:map";
 @use 'variables';
 
 @function map-to-css-variables($map, $prefix: "") {
@@ -5,7 +6,7 @@
 
   @each $key, $value in $map {
     $css-var-name: if($prefix == "", "--#{$key}", "--#{$prefix}-#{$key}");
-    $css-vars: map-merge($css-vars, ($css-var-name: #{$value}));
+    $css-vars: map.merge($css-vars, ($css-var-name: #{$value}));
   }
 
   @return $css-vars;

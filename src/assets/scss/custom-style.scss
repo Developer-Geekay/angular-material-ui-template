@@ -1,42 +1,442 @@
-@use "@angular/material" as mat;
-// @use "themecolors/typographyConfig" as typography;
-
-// @include mat.core(typography.$my-app-typography);
-@include mat.core();
-
-@import "variables";
+@use "variables";
 // @import "layouts/transitions";
-@import "helpers/color";
-@import "helpers/glass";
-@import "helpers/icon-size";
+@use "helpers/color";
+@use "helpers/glass";
+@use "helpers/icon-size";
 
-// //Theme colors
-
-@import "themecolors/default_theme";
-@import "themecolors/blue-theme";
-@import "themecolors/red-theme";
-@import "themecolors/green-theme";
-@import "themecolors/yellow-theme";
-@import "themecolors/spring-green-theme";
-@import "themecolors/cyan-theme";
-@import "themecolors/rose-theme";
-@import "themecolors/violet-theme";
-@import "themecolors/chartreuse-theme";
-@import "themecolors/magenta-theme";
-@import "themecolors/orange-theme";
-@import "themecolors/custom-theme";
+@use "container";
+@use "layouts";
+@use "grid/grid";
+@use "helpers/custom-flex";
+@use "helpers/index";
 
 // //container layout
-@import "overrides/materialoverrides";
-@import "container";
-@import "layouts";
-@import "grid/grid";
-@import "helpers/custom-flex";
-@import "helpers/index";
-
-
+@use "overrides/materialoverrides";
 // // pages
 // @import "pages/dashboards";
-@import "pages/auth";
-@import "pages/setting";
+@use "pages/auth";
+@use "pages/setting";
+
+// Custom styles using Material Design 3 tokens
+// This file contains additional custom styles that complement the Material Design theme
+
+// // Global utility classes
+// .text-primary {
+//   color: var(--mat-sys-primary) !important;
+// }
+
+// .text-secondary {
+//   color: var(--mat-sys-secondary) !important;
+// }
+
+// // .text-error {
+// //   color: var(--mat-sys-error) !important;
+// // }
+
+// // .text-success {
+// //   color: var(--mat-sys-primary) !important;
+// // }
+
+// .text-warning {
+//   color: var(--mat-sys-tertiary) !important;
+// }
+
+// .bg-primary {
+//   background-color: var(--mat-sys-primary) !important;
+//   color: var(--mat-sys-on-primary) !important;
+// }
+
+// .bg-secondary {
+//   background-color: var(--mat-sys-secondary) !important;
+//   color: var(--mat-sys-on-secondary) !important;
+// }
+
+// .bg-surface {
+//   background-color: var(--mat-sys-surface) !important;
+//   color: var(--mat-sys-on-surface) !important;
+// }
+
+// .bg-surface-variant {
+//   background-color: var(--mat-sys-surface-variant) !important;
+//   color: var(--mat-sys-on-surface-variant) !important;
+// }
+
+// // Glassmorphism effects
+// .glass {
+//   background: rgba(255, 255, 255, 0.1);
+//   backdrop-filter: blur(10px);
+//   border: 1px solid rgba(255, 255, 255, 0.2);
+//   border-radius: var(--mat-sys-corner-large);
+// }
+
+// .glass-dark {
+//   background: rgba(0, 0, 0, 0.1);
+//   backdrop-filter: blur(10px);
+//   border: 1px solid rgba(255, 255, 255, 0.1);
+//   border-radius: var(--mat-sys-corner-large);
+// }
+
+// // Card styles
+// .card {
+//   background-color: var(--mat-sys-surface);
+//   border-radius: var(--mat-sys-corner-large);
+//   box-shadow: var(--mat-sys-shadow);
+//   padding: 20px;
+//   transition: box-shadow 0.2s ease, transform 0.2s ease;
+
+//   &:hover {
+//     box-shadow: var(--mat-sys-shadow);
+//     transform: translateY(-2px);
+//   }
+
+//   &.card-elevated {
+//     box-shadow: var(--mat-sys-shadow);
+//   }
+
+//   &.card-outlined {
+//     border: 1px solid var(--mat-sys-outline-variant);
+//     box-shadow: none;
+//   }
+// }
+
+// // Button styles
+// .btn {
+//   border-radius: var(--mat-sys-corner-medium);
+//   font-weight: 500;
+//   padding: 8px 16px;
+//   transition: all 0.2s ease;
+//   border: none;
+//   cursor: pointer;
+//   display: inline-flex;
+//   align-items: center;
+//   gap: 8px;
+
+//   &.btn-primary {
+//     background-color: var(--mat-sys-primary);
+//     color: var(--mat-sys-on-primary);
+
+//     &:hover {
+//       background-color: color-mix(in srgb, var(--mat-sys-primary) 90%, black);
+//     }
+//   }
+
+//   &.btn-secondary {
+//     background-color: var(--mat-sys-secondary);
+//     color: var(--mat-sys-on-secondary);
+
+//     &:hover {
+//       background-color: color-mix(in srgb, var(--mat-sys-secondary) 90%, black);
+//     }
+//   }
+
+//   &.btn-outlined {
+//     background-color: transparent;
+//     color: var(--mat-sys-primary);
+//     border: 1px solid var(--mat-sys-primary);
+
+//     &:hover {
+//       background-color: var(--mat-sys-primary);
+//       color: var(--mat-sys-on-primary);
+//     }
+//   }
+
+//   &.btn-text {
+//     background-color: transparent;
+//     color: var(--mat-sys-primary);
+
+//     &:hover {
+//       background-color: color-mix(in srgb, var(--mat-sys-primary) 8%, transparent);
+//     }
+//   }
+// }
+
+// // Form styles
+// .form-group {
+//   margin-bottom: 16px;
+
+//   .form-label {
+//     display: block;
+//     margin-bottom: 8px;
+//     font-weight: 500;
+//     color: var(--mat-sys-on-surface);
+//   }
+
+//   .form-control {
+//     width: 100%;
+//     padding: 12px 16px;
+//     border: 1px solid var(--mat-sys-outline-variant);
+//     border-radius: var(--mat-sys-corner-medium);
+//     background-color: var(--mat-sys-surface);
+//     color: var(--mat-sys-on-surface);
+//     transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+//     &:focus {
+//       outline: none;
+//       border-color: var(--mat-sys-primary);
+//       box-shadow: 0 0 0 2px color-mix(in srgb, var(--mat-sys-primary) 20%, transparent);
+//     }
+
+//     &::placeholder {
+//       color: var(--mat-sys-on-surface-variant);
+//     }
+//   }
+// }
+
+// // Badge styles
+// .badge {
+//   display: inline-flex;
+//   align-items: center;
+//   padding: 4px 8px;
+//   border-radius: var(--mat-sys-corner-small);
+//   font-size: 12px;
+//   font-weight: 500;
+//   line-height: 1;
+
+//   &.badge-primary {
+//     background-color: var(--mat-sys-primary-container);
+//     color: var(--mat-sys-on-primary-container);
+//   }
+
+//   &.badge-secondary {
+//     background-color: var(--mat-sys-secondary-container);
+//     color: var(--mat-sys-on-secondary-container);
+//   }
+
+//   &.badge-error {
+//     background-color: var(--mat-sys-error-container);
+//     color: var(--mat-sys-on-error-container);
+//   }
+
+//   &.badge-success {
+//     background-color: var(--mat-sys-primary-container);
+//     color: var(--mat-sys-on-primary-container);
+//   }
+
+//   &.badge-warning {
+//     background-color: var(--mat-sys-tertiary-container);
+//     color: var(--mat-sys-on-tertiary-container);
+//   }
+// }
+
+// // Alert styles
+// .alert {
+//   padding: 12px 16px;
+//   border-radius: var(--mat-sys-corner-medium);
+//   margin-bottom: 16px;
+//   border: 1px solid transparent;
+
+//   &.alert-primary {
+//     background-color: var(--mat-sys-primary-container);
+//     color: var(--mat-sys-on-primary-container);
+//     border-color: var(--mat-sys-primary);
+//   }
+
+//   &.alert-secondary {
+//     background-color: var(--mat-sys-secondary-container);
+//     color: var(--mat-sys-on-secondary-container);
+//     border-color: var(--mat-sys-secondary);
+//   }
+
+//   &.alert-error {
+//     background-color: var(--mat-sys-error-container);
+//     color: var(--mat-sys-on-error-container);
+//     border-color: var(--mat-sys-error);
+//   }
+
+//   &.alert-success {
+//     background-color: var(--mat-sys-primary-container);
+//     color: var(--mat-sys-on-primary-container);
+//     border-color: var(--mat-sys-primary);
+//   }
+
+//   &.alert-warning {
+//     background-color: var(--mat-sys-tertiary-container);
+//     color: var(--mat-sys-on-tertiary-container);
+//     border-color: var(--mat-sys-tertiary);
+//   }
+// }
+
+// // Progress bar styles
+// .progress {
+//   width: 100%;
+//   height: 8px;
+//   background-color: var(--mat-sys-surface-variant);
+//   border-radius: var(--mat-sys-corner-full);
+//   overflow: hidden;
+
+//   .progress-bar {
+//     height: 100%;
+//     background-color: var(--mat-sys-primary);
+//     border-radius: var(--mat-sys-corner-full);
+//     transition: width 0.3s ease;
+//   }
+
+//   &.progress-secondary .progress-bar {
+//     background-color: var(--mat-sys-secondary);
+//   }
+
+//   &.progress-error .progress-bar {
+//     background-color: var(--mat-sys-error);
+//   }
+
+//   &.progress-success .progress-bar {
+//     background-color: var(--mat-sys-primary);
+//   }
+
+//   &.progress-warning .progress-bar {
+//     background-color: var(--mat-sys-tertiary);
+//   }
+// }
+
+// // Divider styles
+// .divider {
+//   height: 1px;
+//   background-color: var(--mat-sys-outline-variant);
+//   margin: 16px 0;
+//   border: none;
+
+//   &.divider-vertical {
+//     width: 1px;
+//     height: auto;
+//     margin: 0 16px;
+//   }
+// }
+
+// // Spacing utilities
+// .m-0 { margin: 0 !important; }
+// .m-1 { margin: 4px !important; }
+// .m-2 { margin: 8px !important; }
+// .m-3 { margin: 12px !important; }
+// .m-4 { margin: 16px !important; }
+// .m-5 { margin: 20px !important; }
+
+// .p-0 { padding: 0 !important; }
+// .p-1 { padding: 4px !important; }
+// .p-2 { padding: 8px !important; }
+// .p-3 { padding: 12px !important; }
+// .p-4 { padding: 16px !important; }
+// .p-5 { padding: 20px !important; }
+
+// // Text utilities
+// .text-center { text-align: center !important; }
+// .text-left { text-align: left !important; }
+// .text-right { text-align: right !important; }
+
+// .text-bold { font-weight: 700 !important; }
+// .text-medium { font-weight: 500 !important; }
+// .text-light { font-weight: 300 !important; }
+
+// // Display utilities
+// .d-none { display: none !important; }
+// .d-block { display: block !important; }
+// .d-flex { display: flex !important; }
+// .d-inline { display: inline !important; }
+// .d-inline-block { display: inline-block !important; }
+
+// // Flex utilities
+// .flex-row { flex-direction: row !important; }
+// .flex-column { flex-direction: column !important; }
+// .justify-center { justify-content: center !important; }
+// .justify-start { justify-content: flex-start !important; }
+// .justify-end { justify-content: flex-end !important; }
+// .justify-between { justify-content: space-between !important; }
+// .align-center { align-items: center !important; }
+// .align-start { align-items: flex-start !important; }
+// .align-end { align-items: flex-end !important; }
+
+// // Position utilities
+// .position-relative { position: relative !important; }
+// .position-absolute { position: absolute !important; }
+// .position-fixed { position: fixed !important; }
+
+// // Border utilities
+// .border { border: 1px solid var(--mat-sys-outline-variant) !important; }
+// .border-0 { border: none !important; }
+// .rounded { border-radius: var(--mat-sys-corner-medium) !important; }
+// .rounded-full { border-radius: var(--mat-sys-corner-full) !important; }
+
+// // Shadow utilities
+// .shadow-sm { box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05) !important; }
+// .shadow { box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important; }
+// .shadow-lg { box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important; }
+
+// // Responsive utilities
+// @media (max-width: 768px) {
+//   .d-md-none { display: none !important; }
+//   .d-md-block { display: block !important; }
+//   .d-md-flex { display: flex !important; }
+// }
+
+// @media (min-width: 769px) {
+//   .d-lg-none { display: none !important; }
+//   .d-lg-block { display: block !important; }
+//   .d-lg-flex { display: flex !important; }
+// }
+
+// // Animation utilities
+// .fade-in {
+//   animation: fadeIn 0.3s ease-in-out;
+// }
+
+// .slide-up {
+//   animation: slideUp 0.3s ease-out;
+// }
+
+// .slide-down {
+//   animation: slideDown 0.3s ease-out;
+// }
+
+// @keyframes fadeIn {
+//   from { opacity: 0; }
+//   to { opacity: 1; }
+// }
+
+// @keyframes slideUp {
+//   from { transform: translateY(20px); opacity: 0; }
+//   to { transform: translateY(0); opacity: 1; }
+// }
+
+// @keyframes slideDown {
+//   from { transform: translateY(-20px); opacity: 0; }
+//   to { transform: translateY(0); opacity: 1; }
+// }
+
+// // Custom scrollbar
+// ::-webkit-scrollbar {
+//   width: 6px;
+// }
+
+// ::-webkit-scrollbar-track {
+//   background: var(--mat-sys-surface-variant);
+// }
+
+// ::-webkit-scrollbar-thumb {
+//   background: var(--mat-sys-outline-variant);
+//   border-radius: var(--mat-sys-corner-full);
+// }
+
+// ::-webkit-scrollbar-thumb:hover {
+//   background: var(--mat-sys-outline);
+// }
+
+// // Selection styles
+// ::selection {
+//   background-color: color-mix(in srgb, var(--mat-sys-primary) 20%, transparent);
+//   color: var(--mat-sys-on-surface);
+// }
+
+// // Print styles
+// @media print {
+//   .no-print { display: none !important; }
+
+//   body {
+//     background: white !important;
+//     color: black !important;
+//   }
+
+//   .card, .btn, .badge {
+//     box-shadow: none !important;
+//     border: 1px solid #ccc !important;
+//   }
+// }
 

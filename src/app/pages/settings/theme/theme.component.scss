@@ -1,0 +1,319 @@
+.theme-container {
+  background-color: var(--mat-sys-surface);
+}
+
+.theme-header {
+  margin-bottom: 32px;
+  text-align: center;
+
+  h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--mat-sys-on-surface);
+    margin: 0 0 8px 0;
+  }
+
+  p {
+    font-size: 16px;
+    color: var(--mat-sys-on-surface-variant);
+    margin: 0;
+  }
+}
+
+.theme-section {
+  margin-bottom: 24px;
+
+  mat-card-header {
+    padding: 24px 24px 16px 24px;
+
+    mat-card-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--mat-sys-on-surface);
+      margin: 0;
+
+      mat-icon {
+        color: var(--mat-sys-primary);
+        font-size: 24px;
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    mat-card-subtitle {
+      font-size: 14px;
+      color: var(--mat-sys-on-surface-variant);
+      margin: 4px 0 0 0;
+    }
+  }
+
+  mat-card-content {
+    padding: 0 24px 24px 24px;
+  }
+}
+
+// Theme Mode Options
+.theme-mode-options {
+  display: flex;
+  gap: 12px;
+
+  .theme-mode-option {
+    &:hover {
+      background-color: var(--mat-sys-surface);
+      transform: translateY(-1px);
+      box-shadow: var(--mat-sys-shadow);
+    }
+
+    &.active {
+      color: var(--mat-sys-on-primary-container);
+
+      .mode-icon {
+        background-color: var(--mat-sys-secondary-container);
+      }
+
+      .mode-icon mat-icon {
+        color: var(--mat-sys-primary);
+      }
+
+      .mode-name {
+        color: var(--mat-sys-on-primary-container);
+      }
+
+      .mode-description {
+        color: var(--mat-sys-on-primary-container);
+        opacity: 0.8;
+      }
+    }
+
+    .mode-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--mat-sys-corner-medium);
+      background-color: var(--mat-sys-surface);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--mat-sys-shadow);
+
+      mat-icon {
+        color: var(--mat-sys-on-surface-variant);
+        font-size: 24px;
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    .mode-info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+
+      .mode-name {
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--mat-sys-on-surface);
+      }
+
+      .mode-description {
+        font-size: 14px;
+        color: var(--mat-sys-on-surface-variant);
+      }
+    }
+
+    .check-icon {
+      color: var(--mat-sys-primary);
+      font-size: 20px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+// Color Presets - Reduced sizes
+.color-presets {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+
+  .color-preset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 12px;
+    border-radius: var(--mat-sys-corner-medium);
+    background-color: var(--mat-sys-surface-variant);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 2px solid transparent;
+    position: relative;
+
+    &:hover {
+      background-color: var(--mat-sys-surface);
+      transform: translateY(-2px);
+      box-shadow: var(--mat-sys-shadow);
+    }
+
+    &.active {
+      background-color: var(--mat-sys-primary-container);
+      border-color: var(--mat-sys-primary);
+
+      .preset-name {
+        color: var(--mat-sys-on-primary-container);
+      }
+
+      .check-icon {
+        color: var(--mat-sys-primary);
+      }
+    }
+
+    .preset-colors {
+      display: flex;
+      gap: 6px;
+
+      .primary-color,
+      .accent-color {
+        width: 24px;
+        height: 24px;
+        border-radius: var(--mat-sys-corner-small);
+        box-shadow: var(--mat-sys-shadow);
+      }
+    }
+
+    .preset-name {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--mat-sys-on-surface);
+      text-align: center;
+    }
+
+    .check-icon {
+      position: absolute;
+      top: 6px;
+      right: 6px;
+      color: var(--mat-sys-primary);
+      font-size: 14px;
+      width: 14px;
+      height: 14px;
+    }
+  }
+}
+
+// Custom Colors
+.custom-colors {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+
+  .color-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    label {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--md-sys-color-on-surface);
+    }
+
+    .color-input {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      .color-picker {
+        width: 48px;
+        height: 48px;
+        border: none;
+        border-radius: var(--md-sys-shape-corner-medium);
+        cursor: pointer;
+        background: none;
+        box-shadow: var(--md-sys-elevation-level-1);
+
+        &::-webkit-color-swatch-wrapper {
+          border-radius: var(--md-sys-shape-corner-medium);
+        }
+
+        &::-webkit-color-swatch {
+          border: none;
+          border-radius: var(--md-sys-shape-corner-medium);
+        }
+      }
+
+      .color-value {
+        font-family: "Courier New", monospace;
+        font-size: 14px;
+        color: var(--md-sys-color-on-surface-variant);
+        background-color: var(--md-sys-color-surface-variant);
+        padding: 8px 12px;
+        border-radius: var(--md-sys-shape-corner-small);
+      }
+    }
+  }
+}
+
+
+// Density Selector
+.density-selector {
+  width: 100%;
+}
+
+.density-preview {
+  .density-example {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+    background-color: var(--mat-sys-surface-variant);
+    border-radius: var(--mat-sys-corner-medium);
+
+    .example-button {
+      padding: 8px 16px;
+      background-color: var(--mat-sys-primary);
+      color: var(--mat-sys-on-primary);
+      border-radius: var(--mat-sys-corner-small);
+      font-size: 14px;
+      font-weight: 500;
+      text-align: center;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background-color: var(--mat-sys-primary-fixed-dim);
+      }
+    }
+
+    .example-text {
+      font-size: 14px;
+      color: var(--mat-sys-on-surface);
+    }
+
+    .example-spacing {
+      height: 8px;
+      background-color: var(--mat-sys-outline-variant);
+      border-radius: var(--mat-sys-corner-small);
+    }
+  }
+}
+
+// Quick Actions
+.quick-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+
+  .action-button {
+    flex: 1;
+    min-width: 150px;
+    height: 44px;
+    font-weight: 500;
+
+    mat-icon {
+      margin-right: 8px;
+    }
+  }
+}

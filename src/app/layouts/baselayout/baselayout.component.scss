@@ -1,0 +1,23 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.app-header {
+}
+
+.app-content {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.app-footer {
+  background-color: var(--mat-sys-secondary-container);
+}
+
+.app-content,
+.app-footer,
+.app-header {
+  padding: 0 15px;
+}

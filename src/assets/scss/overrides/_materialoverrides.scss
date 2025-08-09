@@ -1,6 +1,9 @@
+@use "sass:meta";
+@use "../variables";
+
 html {
   // @import "./buttons";
-  @import "./drawer";
+  @include meta.load-css("drawer");
   // @import "./form";
   // @import "./card";
   // @import "./typography";
@@ -8,11 +11,12 @@ html {
   // @import "./table";
   // @import "./list";
   // @import "./checkbox";
-  @import "./dialog";
-  @import "./input";
-  @import "./avatar";
+  @include meta.load-css("datatable");
+  @include meta.load-css("dialog");
+  @include meta.load-css("input");
+  @include meta.load-css("avatar");
 }
 
 .topbar {
-  background-color: $toolbar;
+  background-color: variables.$toolbar;
 }

@@ -1,0 +1,33 @@
+<div class="bottom-bar">
+  <div class="bottom-bar-item" routerLinkActive="active">
+    <a routerLink="/home">
+      <iconify-icon icon="hugeicons:home-09"></iconify-icon>
+      <span>Home</span>
+    </a>
+  </div>
+  <div class="bottom-bar-item" routerLinkActive="active">
+    <a routerLink="/log">
+      <iconify-icon icon="hugeicons:assignments"></iconify-icon>
+      <span>Log</span>
+    </a>
+  </div>
+  <div class="bottom-bar-item" routerLinkActive="active">
+    <a routerLink="/lending">
+      <iconify-icon icon="hugeicons:save-money-dollar"></iconify-icon>
+      <span>Lending</span>
+    </a>
+  </div>
+  <div class="bottom-bar-item" routerLinkActive="active">
+    <a routerLink="/tracker">
+      <iconify-icon icon="hugeicons:apple-reminder"></iconify-icon>
+      <span>Tracker</span>
+    </a>
+  </div>
+
+  <div class="bottom-bar-item" [ngClass]="{'active': checkMoreUrl()}">
+    <a (click)="openMenu()">
+      <iconify-icon icon="hugeicons:dashboard-square-setting"></iconify-icon>
+      <span>More</span>
+    </a>
+  </div>
+</div>

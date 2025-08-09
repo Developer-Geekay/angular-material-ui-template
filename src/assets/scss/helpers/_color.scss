@@ -1,3 +1,5 @@
+@use "../variables";
+
 @use "sass:meta";
 
 @mixin syntax-colors($args...) {
@@ -13,27 +15,27 @@
 }
 
 @include syntax-colors(
-  $primary: $primary,
-  $accent: $accent,
-  $success: $success,
-  $warning: $warning,
-  $error: $error,
-  $white: $white,
-  $light: $light,
-  $gray-100: $gray-100,
-  $light-error: $light-error,
-  $light-accent: $light-accent,
-  $light-success: $light-success,
-  $light-warning: $light-warning,
-  $light-primary: $light-primary
+  $primary: variables.$primary,
+  $accent: variables.$accent,
+  $success: variables.$success,
+  $warning: variables.$warning,
+  $error: variables.$error,
+  $white: variables.$white,
+  $light: variables.$light,
+  $gray-100: variables.$gray-100,
+  $light-error: variables.$light-error,
+  $light-accent: variables.$light-accent,
+  $light-success: variables.$light-success,
+  $light-warning: variables.$light-warning,
+  $light-primary: variables.$light-primary
 );
 
 .fill-warning svg {
-  fill: $warning;
-  color: $warning;
+  fill: variables.$warning;
+  color: variables.$warning;
 }
 
 .fill-light svg {
-  fill: $light;
-  color: $light;
+  fill: variables.$light;
+  color: variables.$light;
 }

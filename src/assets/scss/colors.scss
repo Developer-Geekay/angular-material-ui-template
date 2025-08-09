@@ -1,0 +1,369 @@
+@use "@angular/material" as mat;
+
+// ============================================================================
+// ANGULAR MATERIAL THEME PALETTES
+// ============================================================================
+
+// Green Palette (Default)
+.green-palette {
+  @include mat.theme(
+    (
+      color: (
+        theme-type: light,
+        primary: mat.$green-palette,
+        tertiary: mat.$green-palette
+      ),
+      typography: Matangi,
+      density: 0
+    )
+  );
+}
+
+.dark-theme.green-palette {
+  @include mat.theme(
+    (
+      color: (
+        theme-type: dark,
+        primary: mat.$green-palette,
+        tertiary: mat.$green-palette
+      ),
+      typography: Matangi,
+      density: 0
+    )
+  );
+}
+
+// Blue Palette
+.blue-palette {
+  @include mat.theme(
+    (
+      color: (
+        theme-type: light,
+        primary: mat.$blue-palette,
+        tertiary: mat.$blue-palette
+      ),
+      typography: Matangi,
+      density: 0
+    )
+  );
+}
+
+.dark-theme.blue-palette {
+  @include mat.theme(
+    (
+      color: (
+        theme-type: dark,
+        primary: mat.$blue-palette,
+        tertiary: mat.$blue-palette
+      ),
+      typography: Matangi,
+      density: 0
+    )
+  );
+}
+
+// Purple Palette
+.purple-palette {
+  @include mat.theme(
+    (
+      color: (
+        theme-type: light,
+        primary: mat.$violet-palette,
+        tertiary: mat.$violet-palette
+      ),
+      typography: Matangi,
+      density: 0
+    )
+  );
+}
+
+.dark-theme.purple-palette {
+  @include mat.theme(
+    (
+      color: (
+        theme-type: dark,
+        primary: mat.$violet-palette,
+        tertiary: mat.$violet-palette
+      ),
+      typography: Matangi,
+      density: 0
+    )
+  );
+}
+
+// Orange Palette
+.orange-palette {
+  @include mat.theme(
+    (
+      color: (
+        theme-type: light,
+        primary: mat.$orange-palette,
+        tertiary: mat.$orange-palette
+      ),
+      typography: Matangi,
+      density: 0
+    )
+  );
+}
+
+.dark-theme.orange-palette {
+  @include mat.theme(
+    (
+      color: (
+        theme-type: dark,
+        primary: mat.$orange-palette,
+        tertiary: mat.$orange-palette
+      ),
+      typography: Matangi,
+      density: 0
+    )
+  );
+}
+
+// Teal Palette
+.teal-palette {
+  @include mat.theme(
+    (
+      color: (
+        theme-type: light,
+        primary: mat.$cyan-palette,
+        tertiary: mat.$cyan-palette
+      ),
+      typography: Matangi,
+      density: 0
+    )
+  );
+}
+
+.dark-theme.teal-palette {
+  @include mat.theme(
+    (
+      color: (
+        theme-type: dark,
+        primary: mat.$cyan-palette,
+        tertiary: mat.$cyan-palette
+      ),
+      typography: Matangi,
+      density: 0
+    )
+  );
+}
+
+// Indigo Palette
+.indigo-palette {
+  @include mat.theme(
+    (
+      color: (
+        theme-type: light,
+        primary: mat.$azure-palette,
+        tertiary: mat.$azure-palette
+      ),
+      typography: Matangi,
+      density: 0
+    )
+  );
+}
+
+.dark-theme.indigo-palette {
+  @include mat.theme(
+    (
+      color: (
+        theme-type: dark,
+        primary: mat.$azure-palette,
+        tertiary: mat.$azure-palette
+      ),
+      typography: Matangi,
+      density: 0
+    )
+  );
+}
+
+// Red Palette
+.red-palette {
+  @include mat.theme(
+    (
+      color: (
+        theme-type: light,
+        primary: mat.$red-palette,
+        tertiary: mat.$red-palette
+      ),
+      typography: Matangi,
+      density: 0
+    )
+  );
+}
+
+.dark-theme.red-palette {
+  @include mat.theme(
+    (
+      color: (
+        theme-type: dark,
+        primary: mat.$red-palette,
+        tertiary: mat.$red-palette
+      ),
+      typography: Matangi,
+      density: 0
+    )
+  );
+}
+
+// Pink Palette
+.pink-palette {
+  @include mat.theme(
+    (
+      color: (
+        theme-type: light,
+        primary: mat.$rose-palette,
+        tertiary: mat.$rose-palette
+      ),
+      typography: Matangi,
+      density: 0
+    )
+  );
+}
+
+.dark-theme.pink-palette {
+  @include mat.theme(
+    (
+      color: (
+        theme-type: dark,
+        primary: mat.$rose-palette,
+        tertiary: mat.$rose-palette
+      ),
+      typography: Matangi,
+      density: 0
+    )
+  );
+}
+
+// Yellow Palette
+.yellow-palette {
+  @include mat.theme(
+    (
+      color: (
+        theme-type: light,
+        primary: mat.$yellow-palette,
+        tertiary: mat.$yellow-palette
+      ),
+      typography: Matangi,
+      density: 0
+    )
+  );
+}
+
+.dark-theme.yellow-palette {
+  @include mat.theme(
+    (
+      color: (
+        theme-type: dark,
+        primary: mat.$yellow-palette,
+        tertiary: mat.$yellow-palette
+      ),
+      typography: Matangi,
+      density: 0
+    )
+  );
+}
+
+// Brown Palette (using orange as closest)
+.brown-palette {
+  @include mat.theme(
+    (
+      color: (
+        theme-type: light,
+        primary: mat.$orange-palette,
+        tertiary: mat.$orange-palette
+      ),
+      typography: Matangi,
+      density: 0
+    )
+  );
+}
+
+.dark-theme.brown-palette {
+  @include mat.theme(
+    (
+      color: (
+        theme-type: dark,
+        primary: mat.$orange-palette,
+        tertiary: mat.$orange-palette
+      ),
+      typography: Matangi,
+      density: 0
+    )
+  );
+}
+
+// Grey Palette (using spring-green as closest)
+.grey-palette {
+  @include mat.theme(
+    (
+      color: (
+        theme-type: light,
+        primary: mat.$spring-green-palette,
+        tertiary: mat.$spring-green-palette
+      ),
+      typography: Matangi,
+      density: 0
+    )
+  );
+}
+
+.dark-theme.grey-palette {
+  @include mat.theme(
+    (
+      color: (
+        theme-type: dark,
+        primary: mat.$spring-green-palette,
+        tertiary: mat.$spring-green-palette
+      ),
+      typography: Matangi,
+      density: 0
+    )
+  );
+}
+
+// Blue Grey Palette (using chartreuse as closest)
+.blue-grey-palette {
+  @include mat.theme(
+    (
+      color: (
+        theme-type: light,
+        primary: mat.$chartreuse-palette,
+        tertiary: mat.$chartreuse-palette
+      ),
+      typography: Matangi,
+      density: 0
+    )
+  );
+}
+
+.dark-theme.blue-grey-palette {
+  @include mat.theme(
+    (
+      color: (
+        theme-type: dark,
+        primary: mat.$chartreuse-palette,
+        tertiary: mat.$chartreuse-palette
+      ),
+      typography: Matangi,
+      density: 0
+    )
+  );
+}
+
+// ============================================================================
+// DENSITY OVERRIDES
+// ============================================================================
+
+.density-compact {
+  @include mat.theme-overrides((
+    density: -1
+  ));
+}
+
+.density-spacious {
+  @include mat.theme-overrides((
+    density: 1
+  ));
+}

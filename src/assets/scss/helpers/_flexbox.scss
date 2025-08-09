@@ -39,4 +39,30 @@ $utilities: (
       stretch: stretch,
     )
   ),
+  'justify-self': (
+    property: justify-self,
+    class: justify-self,
+    values: (
+      start: flex-start,
+      end: flex-end,
+      center: center,
+      between: space-between,
+      around: space-around,
+    )
+  ),
+  'align-self': (
+    property: align-self,
+    class: align-self,
+    values: (
+      start: flex-start,
+      end: flex-end,
+      center: center,
+      baseline: baseline,
+      stretch: stretch,
+    )
+  ),
 );
+
+.flex-wrap{
+  flex-wrap: wrap;
+}

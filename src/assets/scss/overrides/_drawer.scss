@@ -1,24 +1,31 @@
 // Material Sidenav Overrides
 .mat-drawer-container:not(.sidebar-handset) {
   --mat-sidenav-container-shape: 0px;
-  --mat-sidenav-container-divider-color: #dddada;
+  --mat-sidenav-container-divider-color: var(--mat-sys-outline-variant);
   & .mat-drawer {
     width: 60px;
     transition: width 0.5s, color 0.5s;
+    overflow: visible;
+    & .mat-drawer-inner-container {
+      overflow: visible;
+    }
   }
   & .mat-drawer-content {
-    margin-left: 60px;
+    margin-left: 60px !important;
     transition: margin-left 0.5s, color 0.5s;
+    & .layout-header {
+      width: calc(100% - 60px);
+    }
   }
 }
 
 .mat-drawer-container {
-  --mat-sidenav-content-background-color: #ededed;
+  --mat-sidenav-content-background-color: var(--mat-sys-background);
 }
 
 .dark .mat-drawer-container {
-  --mat-sidenav-container-divider-color: #33353d;
-  --mat-sidenav-content-background-color: #121212;
+  --mat-sidenav-container-divider-color: var(--mat-sys-outline);
+  --mat-sidenav-content-background-color: var(--mat-sys-background);
 }
 
 .mat-drawer-expanded.mat-drawer-container:not(.sidebar-handset) {
@@ -27,6 +34,9 @@
   }
   & .mat-drawer-content {
     margin-left: 200px !important;
+    & .layout-header {
+      width: calc(100% - 200px);
+    }
   }
 }
 
